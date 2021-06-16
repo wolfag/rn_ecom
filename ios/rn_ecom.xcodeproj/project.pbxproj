@@ -14,6 +14,7 @@
 		2709214AB1FD8537FB5776DA /* libPods-rn_ecom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E1F968F1C4C46797317C8A /* libPods-rn_ecom.a */; };
 		7BB1686580B9E97AE3884F71 /* libPods-rn_ecom-rn_ecomTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 155AE689962489E680FF6CCB /* libPods-rn_ecom-rn_ecomTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8416D65C267A573100AEC131 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416D65B267A573100AEC131 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,24 @@
 		1805BBDC7E6EDD93C5EFE3EC /* Pods-rn_ecom-rn_ecomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_ecom-rn_ecomTests.debug.xcconfig"; path = "Target Support Files/Pods-rn_ecom-rn_ecomTests/Pods-rn_ecom-rn_ecomTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D43566BE67B51B90F6221B5 /* Pods-rn_ecom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_ecom.release.xcconfig"; path = "Target Support Files/Pods-rn_ecom/Pods-rn_ecom.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = rn_ecom/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8416D5B6267A4A4400AEC131 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		8416D5B7267A4A4400AEC131 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		8416D5B8267A4A4400AEC131 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		8416D5B9267A4A4400AEC131 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		8416D5BA267A4A4400AEC131 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		8416D5BB267A4A4400AEC131 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		8416D5BC267A4A4400AEC131 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		8416D5BD267A4A4400AEC131 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		8416D5BE267A4A4400AEC131 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		8416D5BF267A4A4400AEC131 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		8416D5C0267A4A4400AEC131 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		8416D5C1267A4A4400AEC131 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		8416D5C2267A4A4400AEC131 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		8416D5C3267A4A4400AEC131 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		8416D5C4267A4A4400AEC131 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		8416D5C5267A4A4400AEC131 /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		8416D65A267A573000AEC131 /* rn_ecom-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rn_ecom-Bridging-Header.h"; sourceTree = "<group>"; };
+		8416D65B267A573100AEC131 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		AE9F79A142FBFC0B34E8191D /* Pods-rn_ecom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_ecom.debug.xcconfig"; path = "Target Support Files/Pods-rn_ecom/Pods-rn_ecom.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F7E1F968F1C4C46797317C8A /* libPods-rn_ecom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rn_ecom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +105,7 @@
 		13B07FAE1A68108700A75B9A /* rn_ecom */ = {
 			isa = PBXGroup;
 			children = (
+				8416D5B5267A4A1200AEC131 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -116,12 +136,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				8416D65B267A573100AEC131 /* File.swift */,
 				13B07FAE1A68108700A75B9A /* rn_ecom */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* rn_ecomTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				C3DD86A30302B8868008A6CE /* Pods */,
+				8416D65A267A573000AEC131 /* rn_ecom-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -137,6 +159,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8416D5B5267A4A1200AEC131 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8416D5C5267A4A4400AEC131 /* AntDesign.ttf */,
+				8416D5BD267A4A4400AEC131 /* Entypo.ttf */,
+				8416D5C1267A4A4400AEC131 /* EvilIcons.ttf */,
+				8416D5C0267A4A4400AEC131 /* Feather.ttf */,
+				8416D5BA267A4A4400AEC131 /* FontAwesome.ttf */,
+				8416D5B7267A4A4400AEC131 /* FontAwesome5_Brands.ttf */,
+				8416D5C2267A4A4400AEC131 /* FontAwesome5_Regular.ttf */,
+				8416D5BE267A4A4400AEC131 /* FontAwesome5_Solid.ttf */,
+				8416D5BC267A4A4400AEC131 /* Fontisto.ttf */,
+				8416D5B8267A4A4400AEC131 /* Foundation.ttf */,
+				8416D5BF267A4A4400AEC131 /* Ionicons.ttf */,
+				8416D5C4267A4A4400AEC131 /* MaterialCommunityIcons.ttf */,
+				8416D5B6267A4A4400AEC131 /* MaterialIcons.ttf */,
+				8416D5C3267A4A4400AEC131 /* Octicons.ttf */,
+				8416D5B9267A4A4400AEC131 /* SimpleLineIcons.ttf */,
+				8416D5BB267A4A4400AEC131 /* Zocial.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		C3DD86A30302B8868008A6CE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +190,6 @@
 				1805BBDC7E6EDD93C5EFE3EC /* Pods-rn_ecom-rn_ecomTests.debug.xcconfig */,
 				086F659D07573C96056770F0 /* Pods-rn_ecom-rn_ecomTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +252,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -412,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				8416D65C267A573100AEC131 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1805BBDC7E6EDD93C5EFE3EC /* Pods-rn_ecom-rn_ecomTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 086F659D07573C96056770F0 /* Pods-rn_ecom-rn_ecomTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = rn_ecomTests/Info.plist;
@@ -498,6 +545,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = rn_ecom;
+				SWIFT_OBJC_BRIDGING_HEADER = "rn_ecom-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +571,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = rn_ecom;
+				SWIFT_OBJC_BRIDGING_HEADER = "rn_ecom-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
