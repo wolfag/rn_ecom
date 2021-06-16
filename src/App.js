@@ -18,12 +18,11 @@ import {
 } from 'react-native';
 import LottieView from 'lottie-react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-
+import {Theme} from '@common/theme';
 
 const App = () => {
- 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex: 1, backgroundColor: Theme.backgrounds.white}}>
       <Text>hello</Text>
       <Icon name="rocket" size={30} color="#900" />
       <LottieView
@@ -35,6 +34,5 @@ const App = () => {
     </SafeAreaView>
   );
 };
-
 
 export default App;
