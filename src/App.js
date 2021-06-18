@@ -19,20 +19,14 @@ import {
 import LottieView from 'lottie-react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Theme} from '@common/theme';
+import 'react-native-gesture-handler';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+
+import AppNavigation from './navigation';
 
 const App = () => {
-  return (
-    <SafeAreaView style={{flex: 1, backgroundColor: Theme.backgrounds.white}}>
-      <Text>hello</Text>
-      <Icon name="rocket" size={30} color="#900" />
-      <LottieView
-        source={require('@src/assets/animations/truck.json')}
-        style={{height: 35}}
-        autoPlay
-        loop
-      />
-    </SafeAreaView>
-  );
+  return <AppNavigation />;
 };
 
 export default App;
