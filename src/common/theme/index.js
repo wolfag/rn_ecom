@@ -1,1 +1,1 @@
-export { Theme, WidthScreen, HeightScreen } from './theme'
+export {Theme, WidthScreen, HeightScreen} from './theme';

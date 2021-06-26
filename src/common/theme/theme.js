@@ -1,9 +1,9 @@
-import { Dimensions } from 'react-native'
-import colors from './colors'
-import { size, fontFamily } from './fonts'
+import {Dimensions} from 'react-native';
+import colors from './colors';
+import {size, fontFamily} from './fonts';
 
-export const WidthScreen = Dimensions.get('window').width
-export const HeightScreen = Dimensions.get('window').height
+export const WidthScreen = Dimensions.get('window').width;
+export const HeightScreen = Dimensions.get('window').height;
 
 export const Theme = {
   colors,
@@ -18,4 +18,4 @@ export const Theme = {
   },
   size,
   fontFamily,
-}
+};
