@@ -9,7 +9,8 @@
     "test": "jest",
     "lint": "eslint .",
     "apk": "cd android && ./gradlew bundleRelease",
-    "keystore": "keytool -genkey -v -keystore release.keystore -alias production -keyalg RSA -keysize 2048 -validity 10000"
+    "keystore": "keytool -genkey -v -keystore release.keystore -alias production -keyalg RSA -keysize 2048 -validity 10000",
+    "pod": "cd ios && pod install"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
@@ -20,6 +21,7 @@
     "lottie-react-native": "^4.0.2",
     "react": "17.0.1",
     "react-native": "0.64.2",
+    "react-native-actionsheet": "^2.4.2",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-reanimated": "^2.2.0",
     "react-native-safe-area-context": "^3.2.0",

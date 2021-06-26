@@ -1,5 +1,5 @@
 import React from 'react';
-import {PanResponder, View, Animated, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 
 export default class HomeScreen extends React.Component {
   render() {
