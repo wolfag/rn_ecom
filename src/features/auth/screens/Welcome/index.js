@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
-// import {useDispatch, useSelector} from 'react-redux';
 import {useNavigation} from '@react-navigation/native';
 
 import Button from '@src/components/Button';
@@ -10,8 +9,6 @@ import Logo from '@src/components/Logo';
 import {Router} from '@src/navigation/router';
 
 function Welcome() {
-  // const {isRegister} = useSelector(state => state.auth);
-  // const dispatch = useDispatch();
   const navigation = useNavigation();
 
   return (

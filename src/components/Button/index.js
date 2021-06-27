@@ -1,10 +1,10 @@
 import React, {memo} from 'react';
-import {StyleSheet, TouchableOpacity} from 'react-native';
+import {StyleSheet, TouchableOpacity, ActivityIndicator} from 'react-native';
 
-function Button({mode, style, children, ...rest}) {
+function Button({mode, style, children, loading, ...rest}) {
   return (
     <TouchableOpacity style={[styles.button, style]} mode={mode} {...rest}>
-      {children}
+      {loading ? <ActivityIndicator /> : children}
     </TouchableOpacity>
   );
 }
