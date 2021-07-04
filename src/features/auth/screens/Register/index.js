@@ -15,6 +15,9 @@ import {
 import {Theme} from '@src/common/theme';
 import {useNavigation} from '@react-navigation/native';
 import {Router} from '@src/navigation/router';
+import {useDispatch, useSelector} from 'react-redux';
+import {typeAuths} from '../../state/type';
+import {useEffect} from 'react';
 
 const schema = yup.object().shape({
   username: yup.string().required('Username is not empty.'),
@@ -40,6 +43,7 @@ const schema = yup.object().shape({
 
 function Register() {
   const navigation = useNavigation();
+  const dispatch = useDispatch();
 
   const usernameRef = useRef();
   const fullNameRef = useRef();
@@ -57,8 +61,34 @@ function Register() {
     resolver: yupResolver(schema),
   });
 
+  const {errorRegister, isRegister, isRegisterLoading} = useSelector(
+    state => state.auth,
+  );
+
+  useEffect(() => {
+    if (isRegister) {
+      navigation.goBack();
+      dispatch({
+        type: typeAuths.changeFields,
+        payload: {
+          changeFields: {
+            isRegister: false,
+            errorRegister: null,
+          },
+        },
+      });
+    }
+  }, [isRegister, dispatch, navigation]);
+
   const _onSubmit = handleSubmit(data => {
-    console.log({data});
+    dispatch({
+      type: typeAuths.register,
+      payload: {
+        username: data.username,
+        fullName: data.fullName,
+        password: data.password,
+      },
+    });
   });
 
   return (
@@ -66,6 +96,8 @@ function Register() {
       <Container center>
         <Logo />
         <Text style={styles.title}>Welcome back</Text>
+        {errorRegister && <Text style={styles.error}>{errorRegister}</Text>}
+
         <KeyboardAwareScrollView
           keyboardDismissMode="interactive"
           keyboardShouldPersistTaps="always"
@@ -98,7 +130,7 @@ function Register() {
                 value={value}
                 onChangeText={onChange}
                 errorText={errors.username?.message}
-                autoCapital={false}
+                autoCapitalize="none"
                 onBlur={onBlur}
               />
             )}
@@ -135,6 +167,7 @@ function Register() {
                 errorText={errors.email?.message}
                 onBlur={onBlur}
                 keyboardType="email-address"
+                autoCapitalize="none"
               />
             )}
           />
@@ -153,6 +186,7 @@ function Register() {
                 errorText={errors.password?.message}
                 isPassword
                 onBlur={onBlur}
+                autoCapitalize="none"
               />
             )}
           />
@@ -171,6 +205,7 @@ function Register() {
                 errorText={errors.confirmPassword?.message}
                 isPassword
                 onBlur={onBlur}
+                autoCapitalize="none"
               />
             )}
           />
@@ -211,10 +246,10 @@ function Register() {
           />
         </KeyboardAwareScrollView>
         <Button
+          loading={isRegisterLoading}
           style={{backgroundColor: Theme.colors.primary}}
           onPress={_onSubmit}
-          // disabled={!isValid}
-        >
+          disabled={isRegisterLoading}>
           <Text style={[styles.text, styles.loginText]}>Register</Text>
         </Button>
 
@@ -267,4 +302,11 @@ const styles = StyleSheet.create({
     color: Theme.colors.secondary,
   },
   loginText: {color: 'white'},
+  error: {
+    width: '70%',
+    color: Theme.colors.error,
+    fontFamily: Theme.fontFamily.QuicksandMedium,
+    fontSize: Theme.size.small,
+    textAlign: 'center',
+  },
 });

@@ -3,6 +3,8 @@ import {View, Text, StyleSheet, FlatList} from 'react-native';
 import {Container} from '@src/components';
 import {InfoCard, InfoProfile} from '../../components';
 import ButtonLogout from '../../components/ButtonLogout';
+import {useDispatch} from 'react-redux';
+import {typeAuths} from '../../state/type';
 const InfoCards = [
   {icon: 'basket-outline', name: 'Orders'},
   {icon: 'newspaper-outline', name: 'My Details'},
@@ -15,6 +17,8 @@ const InfoCards = [
 ];
 
 export default function Profile() {
+  const dispatch = useDispatch();
+
   return (
     <Container>
       <FlatList
@@ -22,7 +26,15 @@ export default function Profile() {
         renderItem={({item}) => <InfoCard {...item} />}
         keyExtractor={(item, index) => `${index}`}
         ListHeaderComponent={InfoProfile}
-        ListFooterComponent={ButtonLogout}
+        ListFooterComponent={
+          <ButtonLogout
+            onPress={() => {
+              dispatch({
+                type: typeAuths.logout,
+              });
+            }}
+          />
+        }
       />
     </Container>
   );

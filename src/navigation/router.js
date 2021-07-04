@@ -19,6 +19,7 @@ export const Router = {
       Login: 'Login',
       Register: 'Register',
       ForgotPassword: 'ForgotPassword',
+      Welcome: 'Welcome',
     },
   },
 };

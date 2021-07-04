@@ -1,10 +1,14 @@
 import React, {memo} from 'react';
 import {StyleSheet, TouchableOpacity, ActivityIndicator} from 'react-native';
 
-function Button({mode, style, children, loading, ...rest}) {
+function Button({mode, style, children, loading, loadingColor, ...rest}) {
   return (
     <TouchableOpacity style={[styles.button, style]} mode={mode} {...rest}>
-      {loading ? <ActivityIndicator /> : children}
+      {loading ? (
+        <ActivityIndicator color={loadingColor || 'white'} />
+      ) : (
+        children
+      )}
     </TouchableOpacity>
   );
 }

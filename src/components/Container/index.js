@@ -13,5 +13,5 @@ export default function Container({children, center}) {
 }
 
 const styles = StyleSheet.create({
-  root: {flex: 1, width: '100%'},
+  root: {flex: 1, width: '100%', marginBottom: 50},
 });

@@ -6,27 +6,36 @@
  * @flow strict-local
  */
 
-import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-import LottieView from 'lottie-react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import {Theme} from '@common/theme';
 import 'react-native-gesture-handler';
+import React from 'react';
+import {StatusBar, View} from 'react-native';
+import Toast from 'react-native-toast-message';
 import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/integration/react';
 
+import {Theme} from '@common/theme';
+import {store, persistor} from './store';
 import AppNavigation from './navigation';
 
 const App = () => {
-  return <AppNavigation />;
+  return (
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <NavigationContainer>
+          <View style={{flex: 1, backgroundColor: Theme.backgrounds.white}}>
+            <StatusBar
+              barStyle="dark-content"
+              backgroundColor={Theme.backgrounds.white}
+            />
+            <AppNavigation />
+
+            <Toast ref={ref => Toast.setRef(ref)} />
+          </View>
+        </NavigationContainer>
+      </PersistGate>
+    </Provider>
+  );
 };
 
 export default App;

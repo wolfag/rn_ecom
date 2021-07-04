@@ -3,8 +3,9 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {View, Text} from 'react-native';
 import {HeightScreen, Theme} from '@src/common/theme';
 import TabBarIcon from '../TabBarIcon';
-import {Profile, Welcome} from '@src/features/auth/screens';
+import {Login, Profile, Welcome} from '@src/features/auth/screens';
 import {Router} from '@src/navigation/router';
+import {useSelector} from 'react-redux';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,6 +25,7 @@ function DetailScreen() {
 }
 
 function TabBarBottom() {
+  const {isLogin} = useSelector(state => state.auth);
   return (
     <Tab.Navigator
       tabBarOptions={{
@@ -46,7 +48,7 @@ function TabBarBottom() {
       <Tab.Screen
         showIcon={true}
         name={Router.BottomTabBar.children.Shop}
-        component={Welcome}
+        component={HomeScreen}
         options={{
           tabBarIcon: ({focused}) => (
             <TabBarIcon
@@ -98,7 +100,7 @@ function TabBarBottom() {
       <Tab.Screen
         showIcon={true}
         name={Router.BottomTabBar.children.Profile}
-        component={Profile}
+        component={isLogin ? Profile : Welcome}
         options={{
           tabBarIcon: ({focused}) => (
             <TabBarIcon

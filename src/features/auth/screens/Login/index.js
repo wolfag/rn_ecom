@@ -14,6 +14,10 @@ import {
 import {Theme} from '@src/common/theme';
 import {useNavigation} from '@react-navigation/native';
 import {Router} from '@src/navigation/router';
+import {useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {typeAuths} from '../../state/type';
+import {showToast} from '@src/common/helpers/toast';
 
 const schema = yup.object().shape({
   username: yup.string().required('Username is not empty.'),
@@ -22,6 +26,7 @@ const schema = yup.object().shape({
 
 function Login() {
   const navigation = useNavigation();
+  const dispatch = useDispatch();
 
   const usernameRef = useRef();
   const passwordRef = useRef();
@@ -34,17 +39,35 @@ function Login() {
     resolver: yupResolver(schema),
   });
 
+  const {isLogin, isAuthLoading, errorLogin} = useSelector(state => state.auth);
+
+  useEffect(() => {
+    if (isLogin) {
+      navigation.navigate(Router.BottomTabBar.key);
+    }
+  }, [isLogin, navigation]);
+
   const _onSubmit = handleSubmit(data => {
-    console.log({data});
+    dispatch({
+      type: typeAuths.login,
+      payload: data,
+    });
   });
 
-  const _googleLogin = () => {};
-  console.log({errors});
+  const _googleLogin = () => {
+    showToast({
+      title: 'Sign in',
+      type: 'info',
+      message: 'Sorry can not do it',
+    });
+  };
+
   return (
     <Background>
       <Container center>
         <Logo />
         <Text style={styles.title}>Welcome back</Text>
+        {!!errorLogin && <Text style={styles.error}>{errorLogin}</Text>}
 
         <Controller
           control={control}
@@ -61,7 +84,7 @@ function Login() {
               value={value}
               onChangeText={onChange}
               errorText={errors.username?.message}
-              autoCapital={false}
+              autoCapitalize="none"
               keyboardType="email-address"
               onBlur={onBlur}
             />
@@ -81,6 +104,7 @@ function Login() {
               onChangeText={onChange}
               errorText={errors.password?.message}
               isPassword
+              autoCapitalize="none"
               onBlur={onBlur}
             />
           )}
@@ -97,7 +121,8 @@ function Login() {
         <Button
           style={{backgroundColor: Theme.colors.primary}}
           onPress={_onSubmit}
-          disabled={!isValid}>
+          loading={isAuthLoading}
+          disabled={isAuthLoading}>
           <Text style={[styles.text, styles.loginText]}>Login</Text>
         </Button>
 
@@ -155,4 +180,11 @@ const styles = StyleSheet.create({
     color: Theme.colors.secondary,
   },
   loginText: {color: 'white'},
+  error: {
+    width: '70%',
+    color: Theme.colors.error,
+    fontFamily: Theme.fontFamily.QuicksandMedium,
+    fontSize: Theme.size.small,
+    textAlign: 'center',
+  },
 });
